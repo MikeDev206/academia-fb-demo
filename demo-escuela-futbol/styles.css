@@ -872,3 +872,37 @@ td .sub2 {
     transition: none !important;
   }
 }
+
+/* ===== WATERMARK ===== */
+body::before {
+  content: "MikeDev206  ·  MikeDev206  ·  MikeDev206";
+  position: fixed;
+  top: 20%;
+  left: -30%;
+  width: 160%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: rgba(14, 77, 44, 0.08);
+  transform: rotate(-35deg);
+  pointer-events: none;
+  letter-spacing: 8px;
+  z-index: 9999;
+  white-space: nowrap;
+}
+body::after {
+  content: "MikeDev206  ·  MikeDev206  ·  MikeDev206";
+  position: fixed;
+  top: 50%;
+  left: -30%;
+  width: 160%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: rgba(14, 77, 44, 0.08);
+  transform: rotate(-35deg);
+  pointer-events: none;
+  letter-spacing: 8px;
+  z-index: 9999;
+  white-space: nowrap;
+}
