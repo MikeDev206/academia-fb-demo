@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia FC — Demo</title>
+  <meta name="description" content="Demo de la plataforma de gestión para escuela de fútbol. Datos de ejemplo.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="demo-banner">DEMO · Datos de ejemplo — ninguna información es real</div>
+
+  <!-- ===== LOGIN ===== -->
+  <section id="view-login" class="login-wrap">
+    <div class="login-card">
+      <div class="crest">⚽</div>
+      <h1>Academia FC</h1>
+      <p class="login-sub">Escuela de fútbol infantil y juvenil</p>
+
+      <label class="field">
+        <span>Correo o teléfono</span>
+        <input type="text" placeholder="ejemplo@correo.com" autocomplete="off">
+      </label>
+      <label class="field">
+        <span>Contraseña</span>
+        <input type="password" placeholder="••••••••" autocomplete="off">
+      </label>
+      <button class="btn btn-lima" onclick="login('parent')">Entrar</button>
+
+      <div class="login-divider"><span>acceso rápido para la demo</span></div>
+      <div class="login-quick">
+        <button class="btn btn-ghost" onclick="login('parent')">👨‍👧 Ver como papá / mamá</button>
+        <button class="btn btn-ghost" onclick="login('admin')">🗂️ Ver como administrador</button>
+      </div>
+    </div>
+    <p class="login-foot">Boceto funcional · Propuesta de desarrollo 2026</p>
+  </section>
+
+  <!-- ===== APP SHELL ===== -->
+  <section id="view-app" class="app hidden">
+    <header class="topbar">
+      <div class="topbar-inner container">
+        <div class="brand">
+          <div class="brand-badge">⚽</div>
+          <div class="brand-txt">
+            <strong>Academia FC</strong>
+            <small id="topbar-sub"></small>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" title="Notificaciones">🔔<i class="dot"></i></button>
+          <button class="btn btn-mini" onclick="switchRole()" id="btn-switch"></button>
+          <button class="btn btn-mini btn-outline" onclick="logout()">Salir</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout container">
+      <nav class="sidenav" id="nav"></nav>
+      <main class="content" id="main"></main>
+    </div>
+
+    <nav class="tabbar" id="tabbar"></nav>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
